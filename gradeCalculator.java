@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.*;
 
 public class gradeCalculator {
     private Scanner scanner;
@@ -15,6 +14,7 @@ public class gradeCalculator {
         this.gradesList.add(number);
     }
     
+    //returns the average the average
     public double averageOfPoints() {
         int suma = 0;
         for(int i = 0; i < gradesList.size(); i++) {
@@ -23,6 +23,7 @@ public class gradeCalculator {
         return 1.0 * suma / gradesList.size();
     }
     
+    //This method return the average of points >= 50
     public double pointsAveragePassing() {
         int suma = 0;
         int passingCounter = 0;
@@ -35,16 +36,19 @@ public class gradeCalculator {
         return 1.0 * suma / passingCounter;
     }
     
+    //This method returns the percentage of points >= 50
     public double passPercentage() {
-        int passingGrades = 0;
+        int passingPoints = 0;
         for(int i = 0; i < gradesList.size(); i++) {
             if(gradesList.get(i) >= 50) {
-                passingGrades++;
+                passingPoints++;
             }
         }
-        return (1.0 * passingGrades * 100) / gradesList.size();
+        return (1.0 * passingPoints * 100) / gradesList.size();
     }
     
+    //This method takes score from the UserInterface, converts them to grades 
+    //and attributes their respective number of stars
     public String gradeDistribution() {
         String cinci = "5: ";
         String patru = "4: ";
