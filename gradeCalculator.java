@@ -46,7 +46,6 @@ public class gradeCalculator {
     }
     
     public String gradeDistribution() {
-        Collections.sort(gradesList);
         String cinci = "5: ";
         String patru = "4: ";
         String trei = "3: ";
