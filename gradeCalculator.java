@@ -80,8 +80,4 @@ public class gradeCalculator {
                 unu + "\n" +
                 zero + "\n";
     }
-    
-    public String toString() {
-        return "";
-    }
 }
